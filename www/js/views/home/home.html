@@ -1,0 +1,47 @@
+<ion-view view-title="Ingredients" class="home">
+  <ion-nav-buttons side="primary">
+    <button class="button" ng-click="scan()">
+      <i class="icon ion-camera"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div wm-load="loader">
+      <div class="text-center padding">
+        <svg width="165" height="165" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <title>Layer 1</title>
+            <circle id="circle" class="circle rating-0-circle" r="69.85699" cy="81" cx="81" style="stroke-dashoffset: {{ rating0Offset }}"/>
+            <circle id="circle" class="circle rating-1-circle" r="69.85699" cy="81" cx="81" style="stroke-dashoffset: {{ rating1Offset }}"/>
+            <circle id="circle" class="circle rating-2-circle" r="69.85699" cy="81" cx="81" style="stroke-dashoffset: {{ rating2Offset }}"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="counts padding">
+        <div class="countGroup total">
+          <div class="count"> {{ total }} </div>
+          <div class="countTitle">Total</div>
+        </div>
+
+        <div class="countGroup bad">
+          <div class="count"> {{ r1Count }} </div>
+          <div class="countTitle">Bad</div>
+        </div>
+
+        <div class="countGroup allergy">
+          <div class="count">{{ r0Count }}</div>
+          <div class="countTitle">Allergy</div>
+        </div>
+      </div>
+
+      <ion-list>
+        <ion-item ng-click="openPopover(ing)" ng-repeat="ing in ings" class="item-icon-left item-icon-right">
+          <i class="icon ion-record rating rating-{{ ing.rating }}"></i>
+            {{ ing.name }}
+          <i class="icon ion-information-circled"></i>
+        </ion-item>
+      </ion-list>
+
+    </div>
+  </ion-content>
+</ion-view>

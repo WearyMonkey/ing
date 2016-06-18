@@ -1,0 +1,7 @@
+<div class="wm-loading" ng-if="state == 'loading'">
+  <i class="fa fa-spinner fa-spin"></i>
+</div>
+<div ng-if="state == 'loaded'" ng-transclude></div>
+<div class="wm-error" ng-if="state == 'error'">
+  Bugger me, something went wrong!
+</div>

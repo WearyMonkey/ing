@@ -1,0 +1,88 @@
+wm-confirm {
+  margin: 100px;
+  display: block;
+
+  .modal-content {
+    color: #333;
+    width: 440px;
+    max-width: 95%;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    .modal-header {
+      border: none;
+      padding: 0;
+
+      h4 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 64px;
+        position: relative;
+
+        &:after {
+          content:'';
+          display: block;
+          width: 15%;
+          height: 1px;
+          background-color: #ccc;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          bottom: -1px;
+        }
+      }
+    } // ./modal-header
+
+    .modal-body {
+      p {
+        font-size: 18px;
+        font-weight: bold;
+        text-shadow: none;
+        strong {
+          font-size: 24px;
+        }
+        &.discount {
+          color: #00a17f;
+          font-size: 16px;
+          padding-bottom: 20px;
+
+          strong {
+            font-size: 19px;
+          }
+        }
+      }
+    } // ./modal-body
+
+    .modal-footer {
+      padding: 0;
+      border-top: 1px solid #ccc;
+      .confirmation-nav {
+        display: table;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+
+        li {
+          display: table-cell;
+          width: 50%;
+          &:first-child {
+            border-right: 1px solid #ccc;
+          }
+          button {
+            width: 100%;
+            border: none;
+            background: none;
+            color: #1595d4;
+            border-radius: 0;
+            font-size: 18px;
+            line-height: 44px;
+            padding: 0;
+          }
+        }
+      }
+    } // ./modal-footer
+  }
+}

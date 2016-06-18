@@ -1,0 +1,68 @@
+.home {
+
+  $rating2Color: #b5b1b6;
+  $rating1Color: #ffb364;
+  $rating0Color: #ff3845;
+
+  .counts {
+    background-color: #ddd;
+    overflow: auto;
+
+    .countGroup {
+      float: left;
+      text-align: center;
+      width: 33%;
+
+      &.total {
+        color: #7f7f7f;
+      }
+
+      &.bad {
+        color: darken($rating1Color, 20%);
+      }
+
+      &.allergy {
+        color: $rating0Color;
+      }
+    }
+
+    .count {
+      font-size: 1.5rem;
+    }
+  }
+
+  .rating-2 {
+    color: $rating2Color;
+  }
+
+  .rating-1 {
+    color: $rating1Color;
+  }
+
+  .rating-0 {
+    color: $rating0Color;
+  }
+
+  .circle {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    fill: none;
+    transition: stroke-dashoffset 1s ease;
+  }
+
+  .rating-2-circle {
+    stroke-dashoffset: 440;
+    stroke: $rating2Color;
+    stroke-width: 21;
+  }
+
+  .rating-1-circle {
+    stroke: $rating1Color;
+    stroke-width: 21;
+  }
+
+  .rating-0-circle {
+    stroke: $rating0Color;
+    stroke-width: 20;
+  }
+}

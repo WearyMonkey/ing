@@ -1,0 +1,17 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title text-center">{{header}}</h4>
+  </div>
+  <!-- ./modal-header -->
+  <div class="modal-body" ng-transclude="">
+
+  </div>
+  <!-- ./modal-body -->
+  <div class="modal-footer">
+    <ul class="confirmation-nav">
+      <li><button type="button" class="btn" ng-click="onSelect(false)">{{cancelLabel}}</button></li>
+      <li><button type="button" class="btn" ng-click="onSelect(true)">{{okLabel}}</button></li>
+    </ul>
+  </div>
+  <!-- ./modal-footer -->
+</div>

@@ -1,0 +1,39 @@
+wm-file-upload {
+
+  .image-upload {
+    $button-size: 30px;
+    position: relative;
+    background-color: #eee;
+
+    .image-holder {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+
+      .image-holder-inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .dummy {
+        margin-top: 100%;
+      }
+
+    }
+
+    .btn-file-upload {
+      margin-top: -0.4rem;
+      width: 100%;
+      height: 30px;
+      background: #3aafda;
+      color: #fff;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .btn-file-upload:hover {
+      background: #0098D0;
+    }
+  }
+}

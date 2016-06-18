@@ -1,0 +1,10 @@
+<div class="image-upload">
+  <div class="image-holder" ng-class="{'has-image': !!imageUrl}">
+    <div class="image-holder-inner">
+      <wm-image ng-if="!!imageUrl" src="imageUrl" scale="scale"></wm-image>
+      <span ng-if="!imageUrl">{{label || 'Outlet Logo'}}</span>
+    </div>
+    <div class="dummy"></div>
+  </div>
+  <div class="btn btn-file-upload" ng-file-select ng-file-change="upload($files)">Upload</div>
+</div>

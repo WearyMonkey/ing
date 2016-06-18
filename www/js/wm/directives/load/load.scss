@@ -1,0 +1,13 @@
+[wm-load] {
+  > .wm-loading, > .wm-error {
+    text-align: center;
+    margin: 3rem;
+  }
+}
+
+button[wm-load], [wm-load].btn, [wm-load].wm-load-inline {
+  > .wm-loading, > .wm-error {
+    text-align: inherit;
+    margin: 0;
+  }
+}

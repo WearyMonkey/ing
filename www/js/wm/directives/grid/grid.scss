@@ -1,0 +1,109 @@
+@import "~advo/styles/mixins";
+
+wm-grid {
+  display: block;
+  position: relative;
+
+  .loading-indicator {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: none;
+  }
+
+  .body-buffer {
+    display: none;
+    .body-buffer-inner {
+      padding-top: 50px;
+    }
+  }
+
+  .empty {
+    .body-buffer {
+      display: table-row;
+    }
+  }
+
+  .loading {
+    .loading-indicator {
+      display: block;
+    }
+
+    tbody {
+      opacity: 0.3;
+    }
+  }
+
+  tbody {
+    transition: opacity 100ms linear;
+  }
+
+  /* Table */
+  table.table-rounded {
+    @include border-radius(5px 5px 0px 0px);
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #DDD;
+    margin-bottom: 0;
+
+    & tr:first-child td{
+      border-top: 0;
+    }
+
+    & tbody > tr {
+      cursor: pointer;
+    }
+
+    &>thead>tr>th{
+      background: #7ca1b4;
+      border-bottom: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    &>thead>tr>th:first-child{
+      border-radius: 5px 0 0 0;
+    }
+
+    &>thead>tr>th:last-child{
+      border-radius: 0 5px 0 0;
+    }
+
+    & tr>td,
+    & tr>th{
+      padding: 8px 12px;
+    }
+  }
+
+  .table.table-extended{
+    &>tbody>tr>td,
+    &>tbody>tr>th{
+      padding: 16px 8px;
+    }
+  }
+
+  .wm-grid-footer {
+    color: #fff;
+    background: #7ca1b4;
+    width: 100%;
+    text-align: right;
+    padding: 8px 12px;
+    @include border-radius(0px 0px 5px 5px);
+    .paging {
+      display: inline-block;
+
+      span {
+        margin: 0 1rem;
+      }
+
+      button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #58717e;
+        &:disabled {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}

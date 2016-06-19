@@ -1,7 +1,31 @@
 angular.module('starter').factory('ingredients', function() {
   return [
-    {regex: /apple/, name: 'Apple', description: 'Apple is tasty', rating: 2},
-    {regex: /preservative202/, name: 'Preservative (202)', description: 'Ummm', rating: 1},
-    {regex: /regulator330/, name: 'Regulator (330)', description: 'What the hell is this?', rating: 0}
+    {regex: /apple/, name: 'Apple', purpose: 'For eating', rating: 2, description: 'Apple is tasty'},
+    {regex: /preservative202/, name: 'Potassium Sorbate', subName: 'Preservative (202)', purpose: 'Preservative', rating: 1, description: 'Although some research implies it has a long-term safety record, in vitro studies have shown that it is both genotoxic and mutagenic to human blood cells. Potassium sorbate is found to be toxic to human DNA in peripheral blood lymphocytes, and hence found that it negatively affects immunity. It is often used with ascorbic acid and iron salts as they increase its effectiveness but this tends to form mutagenic compounds that damage DNA molecules. Regardless, three studies have not found it to have any carcinogenic effects in rats.'},
+    {regex: /regulator330/, name: 'Citric Acid', subName: 'Regulator (330)', purpose: 'Regulation', rating: 1, description: 'Found in foods such as butter oil, fruit juice, bakery goods, alcoholic drinks, beer, cheese and processed cheeses, spreads, cider, biscuits, cake mixes, frozen fish, ice-cream and sorbets, jams, jellies, frozen croquette potatoes and potato waffles, packet soups, sweets, tinned fruits, sauces, vegetables and wine.'},
+    {regex: /coconutmilk/, name: 'Coconut Milk', purpose: 'Flavour', rating: 0, description: 'Coconut Milk Extract'},
+    {regex: /maltodextrin/, name: 'Maltodextrin', purpose: 'Thickner', rating: 0, description: "FDA says It's safe, but It's highly processed. It's not sweet but it will affect your blood sugar. This is an important thing for people with diabetes to remember."},
+    {regex: /emulsifier/, name: 'Emulsifier', purpose: 'Thickner, Mixing water and oil', rating: 1, description: "80 percent of the protein from cow milk. Some people are allergic to sodium caseinate, and it has been linked to some human diseases. It's not sweet but it will affect your blood sugar. This is an important thing for people with diabetes to remember."},
+    {regex: /water/, name: 'Water', rating: 2},
+    {regex: /sugar/, name: 'Sugar', rating: 1},
+    {regex: /cream/, name: 'Cream', rating: 2},
+    {regex: /lemongrass/, name: 'Lemon Grass', rating: 2},
+    {regex: /fishsauce/, name: 'Fish Sauce', rating: 0},
+    {regex: /garlic/, name: 'Garlic', rating: 2},
+    {regex: /greenchili/, name: 'Green Chili', rating: 2},
+    {regex: /onion/, name: 'Onion', rating: 2},
+    {regex: /cornstarch/, name: 'Cornstarch', rating: 2, purpose: 'Thickner'},
+    {regex: /xanthangum/, name: 'Xanthan Gum (contains Soy)', purpose: 'Natural gluten maker', rating: 2, description: "Included in most natural, gluten-free and organic products. Xanthan Gum can perform some of the same functions as gluten."},
+    {regex: /corianderpuree/, name: 'Coriander Puree  (contains Soy)', rating: 2},
+    {regex: /brownsugar/, name: 'Brown Sugar', rating: 1},
+    {regex: /salt/, name: 'Salt', rating: 2},
+    {regex: /sodiumbenzoate/, name: 'Sodium Benzoate', rating: 2, purpose: 'Prevent oxidation', description: 'When sodium benzoate and citric acid get together, they form benzene, a cancer-causing chemical associated with leukemia and other blood cancers.'},
+    {regex: /crustacea/, name: 'Crustacea', rating: 1},
+    {regex: /corianderseed/, name: 'Coriander Seed', rating: 2},
+    {regex: /chili/, name: 'Chili', rating: 2},
+    {regex: /cumin/, name: 'Cumin', rating: 2},
+    {regex: /limepuree/, name: 'Lime Puree', rating: 2},
+    {regex: /galangal/, name: 'Galangal', rating: 2},
+    {regex: /foodacidcitric/, name: 'Food Acid (Citric)', rating: 2, purpose: 'Prevent oxidation', description: 'It occurs naturally in citrus fruits.'}
   ];
 });

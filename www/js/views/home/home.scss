@@ -4,6 +4,10 @@
   $rating1Color: #ffb364;
   $rating0Color: #ff3845;
 
+  .subName {
+    font-size: 80%;
+  }
+
   .counts {
     background-color: #ddd;
     overflow: auto;
@@ -65,4 +69,12 @@
     stroke: $rating0Color;
     stroke-width: 20;
   }
+}
+
+.popup__description {
+  margin-top: 1rem;
+}
+
+.photos.button {
+  margin-left: 0.5rem;
 }

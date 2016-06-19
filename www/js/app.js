@@ -35,11 +35,12 @@ angular.module('starter', ['ionic', 'wm.Directives'])
     }, route[2]));
   });
 
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/logo');
 
 });
 
 var routes = [
-  ['home', '/home', require("./views/home/home.js")]
+  ['home', '/home', require("./views/home/home.js")],
+  ['logo', '/logo', require("./views/logo/logo.js")]
 ];
 

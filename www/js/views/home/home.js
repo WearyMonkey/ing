@@ -7,14 +7,14 @@ module.exports = {
   template: require('./home.html'),
   controller: function($scope, $timeout, $ionicPopup, ingredients, photo) {
     $scope.getPhoto = function(fromLibrary) {
-      $scope.loader = photo.getText(fromLibrary, $scope.useFake && $scope.ocrResult).then(function(result) {
+      $scope.loader = photo.getText(fromLibrary, $scope.input.useFake && $scope.ocrResult).then(function(result) {
         $scope.ocrResult = result;
         console.log(result);
       })
     };
 
     $scope.input = {
-      useFake: false
+      useFake: true
     };
 
     $scope.ocrResult = {"text_block":[{"text":
@@ -67,6 +67,8 @@ module.exports = {
         $scope.rating2Offset = 440 - (r2Ratio) * 440;
       }, 0);
     });
+
+    $scope.getPhoto();
   }
 };
 

@@ -23,15 +23,11 @@ module.exports = {
     loaders: [
       {
         test: /\.scss$/,
-        loader: extractCSS.extract("css?root=~&sourceMap!sass?sourceMap")
+        loader: extractCSS.extract("raw!sass?sourceMap")
       },
       {
         test: /\.html$/,
-        loader: "html?root=~"
-      },
-      {
-        test: /\.(svg|woff|ttf|eot|png|jpeg|jpg|gif)/,
-        loader: "file?name=[path][name]-[hash].[ext]"
+        loader: "raw"
       }
     ]
   },

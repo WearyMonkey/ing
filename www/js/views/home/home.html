@@ -1,4 +1,4 @@
-<ion-view view-title="Ingredients" class="home">
+<ion-view view-title="Ingredients" hide-back-button="true" class="home">
   <ion-nav-buttons side="primary">
     <button class="button" ng-click="getPhoto(false)">
       <i class="icon ion-camera"></i>
@@ -8,6 +8,7 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="has-header">
+
     <div wm-load="loader">
       <div class="text-center padding">
         <svg width="165" height="165" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +46,7 @@
         </ion-item>
       </ion-list>
 
-      <ion-toggle ng-model="input.useFake" toggle-class="toggle-calm"></ion-toggle>
+      <ion-toggle ng-model="input.useFake" toggle-class="toggle-calm">Fake Data</ion-toggle>
     </div>
   </ion-content>
 </ion-view>
